@@ -61,6 +61,7 @@ public class CdPlayer {
     if (power) {
         if (cd == null) {
             System.out.println("Reproduciendo el CD : " + cd.getTitle());
+            return cd.getTitle();
         } else {
             System.out.println("No hay ningun CD insertado!");
         }
@@ -68,6 +69,7 @@ public class CdPlayer {
         System.out.println("Hay que encender antes el reproductor");
     }
 
+    return " -- Error, no hay ningun CD -- ";
 
     }
 
