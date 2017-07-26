@@ -22,7 +22,8 @@ public class Main {
         System.out.println(radio2.toString());
 
         //Ex. 02
-
+        Cd cdTest = new Cd("cd 01", 1456);
+        CdPlayer
 
 
 

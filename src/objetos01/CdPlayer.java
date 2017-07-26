@@ -14,7 +14,13 @@ public class CdPlayer {
 
     public CdPlayer(Cd cd){
         this.cd = cd;
-        power = false;
+        this.power = false;
+    }
+
+    public CdPlayer(){
+        this.power = false;
+        this.cd = null;
+
     }
 
     public void encender(){
