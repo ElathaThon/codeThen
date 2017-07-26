@@ -79,4 +79,24 @@ public class CdPlayer {
 
     }
 
+    @Override
+    public String toString() {
+        String text = "El reproductor esta ";
+
+        if (power){
+            text += "encendido";
+        } else {
+            text += "apagado";
+        }
+
+        if (cd != null){
+            text += ", tiene un cd que es: " + cd.getTitle();
+        } else {
+            text += ", no tiene ningun cd insertado.";
+        }
+
+        System.out.println(text);
+
+        return text;
+    }
 }

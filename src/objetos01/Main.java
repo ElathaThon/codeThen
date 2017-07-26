@@ -23,7 +23,23 @@ public class Main {
 
         //Ex. 02
         Cd cdTest = new Cd("cd 01", 1456);
-        CdPlayer
+        CdPlayer cdPlayer01 = new CdPlayer(cdTest);
+        CdPlayer cdPlayer02 = new CdPlayer();
+
+        cdPlayer01.toString();
+        cdPlayer02.toString();
+
+        cdPlayer01.encender();
+        cdPlayer01.play();
+
+        cdPlayer02.play();
+        cdPlayer02.encender();
+        cdPlayer02.insertarCd(cdTest);
+        cdPlayer02.play();
+
+
+
+
 
 
 
