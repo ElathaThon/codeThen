@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        //Ex. 01
         Radio radio1 = new Radio("Marca 1");
         Radio radio2 = new Radio("Marca 2");
 
@@ -18,6 +20,10 @@ public class Main {
         System.out.println(radio2.toString());
         radio2.subirVolumen();
         System.out.println(radio2.toString());
+
+        //Ex. 02
+
+
 
 
 
