@@ -1,5 +1,6 @@
 package objetos01;
 
+import java.util.List;
 
 /**
  * 3- Cread las clases Book y Chapter. Book tendrá author (o si queréis complicarlo, authors), title y chapters (una List de chapters).
@@ -16,6 +17,31 @@ package objetos01;
  * */
 
 public class Book {
+
+    private String author;
+    private String title;
+    private List<Chapter> chapters;
+
+    public Book(String title, String author){
+
+        this.title = title;
+        this.author = author;
+
+    }
+
+    /**
+     * Devuelve el numero total de paginas que tiene el libro.
+     * */
+    public int pages(){
+        // Contar en numero de paginas total, a partir de la suma de pagines de cada uno de los capitulos.
+
+        return 0;
+    }
+
+    public void addChapter(Chapter chapter){
+        this.chapters.add(chapter);
+        System.out.println("Se ha añadido el capitulo");
+    }
 
 
 }

@@ -16,5 +16,8 @@ package objetos01;
 
 public class Chapter {
 
+    private String title;
+    private int page;
+
 
 }
