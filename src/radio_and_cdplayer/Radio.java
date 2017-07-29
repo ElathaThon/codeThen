@@ -1,4 +1,4 @@
-package objetos01;
+package radio_and_cdplayer;
 
 /**
  * 1- Cread una clase Radio con propiedades brand, volume y on (encendida o no).

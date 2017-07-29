@@ -20,6 +20,7 @@ public class Book {
 
     private String author;
     private String title;
+    private int pages;
     private List<Chapter> chapters;
 
     public Book(String title, String author){
@@ -39,9 +40,77 @@ public class Book {
     }
 
     public void addChapter(Chapter chapter){
+
+
+        System.out.println("abans del add....");
         this.chapters.add(chapter);
-        System.out.println("Se ha añadido el capitulo");
+        System.out.println("despres del add....");
+
+        this.pages += chapter.getPages();
+
+        System.out.println("Se ha añadido el capitulo: " + chapter.toString());
     }
 
+    @Override
+    public String toString() {
 
+        String text = this.title + "\nby " + this.author + "\n";
+
+
+        if (chapters == null) {
+
+            text += "No hay capitulos\n";
+
+        } else {
+
+            int pageNum = 1;
+
+            for (int i = 0; i < chapters.size(); i++) {
+
+                text += (i+1) + " - " + chapters.get(i).toString() + "page " + pageNum + "\n";
+                pageNum += chapters.get(i).getPages();
+            }
+
+        }
+
+        text += "------------";
+
+        return text;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

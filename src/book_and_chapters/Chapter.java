@@ -22,7 +22,23 @@ package book_and_chapters;
 public class Chapter {
 
     private String title;
-    private int page;
+    private int pages;
 
 
+    public Chapter(String title, int pages){
+
+        this.title = title;
+        this.pages = pages;
+
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+
+    @Override
+    public String toString() {
+        return this.title;
+    }
 }
