@@ -1,4 +1,4 @@
-package objetos01;
+package book_and_chapters;
 
 /**
  * 3- Cread las clases Book y Chapter. Book tendrá author (o si queréis complicarlo, authors), title y chapters (una List de chapters).
