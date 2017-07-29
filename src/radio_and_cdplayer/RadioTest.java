@@ -1,6 +1,6 @@
 package radio_and_cdplayer;
 
-public class Main {
+public class RadioTest {
 
     public static void main(String[] args) {
 
