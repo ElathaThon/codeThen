@@ -12,6 +12,11 @@ package objetos01;
  * 2 - A Trip to Objectville: page 27
  * 3 - Know Your Variables: page 49
  * etc.
+ *
+ * -chapter
+ * -element
+ * -elementList
+ *
  * */
 
 public class Chapter {
