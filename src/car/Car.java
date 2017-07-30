@@ -44,25 +44,37 @@ public class Car {
     // Methods
 
     void accelerate(int amount) {
-        currentSpeed += amount;
+
+        if (this.currentSpeed + amount > this.maxSpeed){
+            this.currentSpeed = this.maxSpeed;
+        } else {
+            this.currentSpeed += amount;
+        }
+
     }
 
     void brake(int amount) {
-        currentSpeed -= amount;
+
+        if (this.currentSpeed - amount < 0){
+            this.currentSpeed = 0;
+        } else {
+            this.currentSpeed -= amount;
+        }
+
     }
 
     // Getters (we don’t need setters now)
 
     public String getBrand() {
-        return brand;
+        return this.brand;
     }
 
     public int getMaxSpeed() {
-        return maxSpeed;
+        return this.maxSpeed;
     }
 
     public int getCurrentSpeed() {
-        return currentSpeed;
+        return this.currentSpeed;
     }
 }
 
