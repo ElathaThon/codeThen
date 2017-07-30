@@ -7,7 +7,7 @@ public class CarTest {
 
     public static void main(String[] args) {
 
-        generalSample();
+        newCar();
 
 
 
@@ -15,10 +15,10 @@ public class CarTest {
 
     /** Test of sample program */
 
-    public static void generalSample(){
+    public static void newCar(){
 
         Car ferrari = new Car("ferrari",450);
-        Car honda = new Car("honda", 300);
+
 
 
 
