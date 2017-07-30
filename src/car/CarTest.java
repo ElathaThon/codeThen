@@ -11,9 +11,51 @@ public class CarTest {
         accelerateSeveralTimes();
         accelerateAndBrake();
 
+        overAccelerate();
+        overBrake();
+
     }
 
     /** Test of sample program */
+
+
+    /** Aunque acelere mas de su velocidad maxima se quedara en la velocidad maxima */
+    public static void overAccelerate(){
+
+        Car ferrari = new Car("ferrari", 450);
+        ferrari.accelerate(500);
+        assertEquals(ferrari.getCurrentSpeed(), 450);
+
+        Car honda = new Car("honda", 300);
+        honda.accelerate(100);
+        honda.accelerate(100);
+        honda.accelerate(100);
+        assertEquals(honda.getCurrentSpeed(), 300);
+
+        honda.accelerate(1);
+        assertEquals(honda.getCurrentSpeed(), 300);
+
+    }
+
+    /** Aunque frene mas de lo necesario, la velocidad sera cero y nunca negativa */
+    public static void overBrake(){
+
+        Car ferrari = new Car("ferrari", 450);
+        ferrari.accelerate(300);
+        ferrari.brake(400);
+        assertEquals(ferrari.getCurrentSpeed(), 0);
+
+        Car honda = new Car("honda", 300);
+        honda.accelerate(100);
+        honda.brake(50);
+        honda.brake(50);
+        assertEquals(honda.getCurrentSpeed(), 0);
+
+        honda.brake(1);
+        assertEquals(honda.getCurrentSpeed(), 0);
+
+    }
+
 
     /** El coche al principio está a velocidad 0. */
     public static void newCar(){
