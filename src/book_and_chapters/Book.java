@@ -1,5 +1,6 @@
 package book_and_chapters;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,7 @@ public class Book {
 
         this.title = title;
         this.author = author;
+        this.chapters = new ArrayList<>();
 
     }
 
@@ -41,10 +43,7 @@ public class Book {
 
     public void addChapter(Chapter chapter){
 
-
-        System.out.println("abans del add....");
         this.chapters.add(chapter);
-        System.out.println("despres del add....");
 
         this.pages += chapter.getPages();
 
