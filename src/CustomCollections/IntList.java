@@ -51,6 +51,15 @@ class IntList {
 
     /** Tells if the list contains the given value */
     public boolean contains(int value) {
+
+
+        boolean contains = false;
+
+        for (int i = 0; i < this.size; i++) {
+
+        }
+
+
         return false; // TODO
     }
 
