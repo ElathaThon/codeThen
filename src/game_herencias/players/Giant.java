@@ -5,10 +5,13 @@ import java.util.Random;
 public class Giant extends Player {
 
 	private Random random;
+	private Boolean vulnerable;
+
 
 	public Giant() {
 		this.random = new Random();
 		setHealth(10);
+		this.vulnerable = false;
 	}
 
 	@Override
@@ -29,6 +32,7 @@ public class Giant extends Player {
 	    if ( random.nextInt(2) > 0 ) {
 	        return false;
         } else {
+	        this.vulnerable = true;
 	        return true;
         }
 
@@ -37,7 +41,13 @@ public class Giant extends Player {
     @Override
     public void receiveHit(int hit) {
 
-	    setHealth( getHealth() - hit/2 );
+        if (this.vulnerable){
+            setHealth(getHealth() - hit*2);
+            this.vulnerable = false;
+        }else {
+            setHealth(getHealth() - hit / 2);
+        }
 
     }
-}
+
+  }
