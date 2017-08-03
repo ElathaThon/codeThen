@@ -41,13 +41,16 @@ public class Giant extends Player {
     @Override
     public void receiveHit(int hit) {
 
+	    super.receiveHit(this.vulnerable ? hit*2 : hit/2);
+
+	    /*
         if (this.vulnerable){
             setHealth(getHealth() - hit*2);
             this.vulnerable = false;
         }else {
             setHealth(getHealth() - hit / 2);
         }
-
+        */
     }
 
   }
