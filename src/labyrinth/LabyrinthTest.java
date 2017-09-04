@@ -26,6 +26,7 @@ public class LabyrinthTest {
 		LabyrinthReader labyrinthReader = new LabyrinthReader();
 		Labyrinth labyrinth = labyrinthReader.build(map);
 
+
 		labyrinth.movePlayer(Direction.RIGHT);
 
 		Position playerPosition = labyrinth.getPlayerPosition();
