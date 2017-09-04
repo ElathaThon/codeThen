@@ -25,14 +25,15 @@ public class LabyrinthTest {
 
 		LabyrinthReader labyrinthReader = new LabyrinthReader();
 		Labyrinth labyrinth = labyrinthReader.build(map);
+		Game game = new Game();
 
 
-		labyrinth.movePlayer(Direction.RIGHT);
+		game.movePlayer(Direction.RIGHT);
 
-		Position playerPosition = labyrinth.getPlayerPosition();
+		Position playerPosition = game.getPlayerPosition();
 		TestUtil.assertEquals(playerPosition.getX(), 4);
 		TestUtil.assertEquals(playerPosition.getY(), 2);
-		TestUtil.assertEquals(labyrinth.isPlayerOutsideOfMap(), false);
+		TestUtil.assertEquals(game.isPlayerOutsideOfMap(), false);
 	}
 
 	public static void testMovePlayerMultipleTimes() {
@@ -48,19 +49,20 @@ public class LabyrinthTest {
 
 		// Note: we can inline the LabyrinthReader variable
 		Labyrinth labyrinth = new LabyrinthReader().build(map);
+		Game game = new Game();
 
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.UP);
-		labyrinth.movePlayer(Direction.UP);
-		labyrinth.movePlayer(Direction.UP);
-		labyrinth.movePlayer(Direction.RIGHT);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.UP);
+		game.movePlayer(Direction.UP);
+		game.movePlayer(Direction.UP);
+		game.movePlayer(Direction.RIGHT);
 
-		Position playerPosition = labyrinth.getPlayerPosition();
+		Position playerPosition = game.getPlayerPosition();
 		TestUtil.assertEquals(playerPosition.getX(), 3);
 		TestUtil.assertEquals(playerPosition.getY(), 2);
-		TestUtil.assertEquals(labyrinth.isPlayerOutsideOfMap(), false);
+		TestUtil.assertEquals(game.isPlayerOutsideOfMap(), false);
 	}
 
 	public static void testEscape() {
@@ -73,17 +75,18 @@ public class LabyrinthTest {
 		);
 
 		Labyrinth labyrinth = new LabyrinthReader().build(map);
+		Game game = new Game();
 
-		labyrinth.movePlayer(Direction.DOWN);
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.LEFT);
-		labyrinth.movePlayer(Direction.DOWN);
-		labyrinth.movePlayer(Direction.DOWN);
+		game.movePlayer(Direction.DOWN);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.LEFT);
+		game.movePlayer(Direction.DOWN);
+		game.movePlayer(Direction.DOWN);
 
-		Position playerPosition = labyrinth.getPlayerPosition();
+		Position playerPosition = game.getPlayerPosition();
 		TestUtil.assertEquals(playerPosition.getX(), 2);
 		TestUtil.assertEquals(playerPosition.getY(), 4);
-		TestUtil.assertEquals(labyrinth.isPlayerOutsideOfMap(), true);
+		TestUtil.assertEquals(game.isPlayerOutsideOfMap(), true);
 	}
 }

@@ -21,7 +21,8 @@ public class LabyrinthReader {
 		Position startPosition = extractPlayerPosition(map);
 
 		Labyrinth labyrinth = new Labyrinth(map);
-		labyrinth.setPlayerPosition(startPosition);
+		Game game = new Game();
+		game.setPlayerPosition(startPosition);
 
 		return labyrinth;
 	}
